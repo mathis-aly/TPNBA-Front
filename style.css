@@ -1,5 +1,152 @@
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0
-    }
+/* --- CSS Créer avec l'inteligence artificielle --- */
+:root {
+  --primary-color: #1d428a; /* Bleu NBA */
+  --accent-color: #c9082a; /* Rouge NBA */
+  --basketball-orange: #f97316; /* Orange dynamique */
+  --bg-dark: #121212; /* Fond sombre */
+  --card-bg: #1e1e24; /* Fond de la carte légèrement plus clair */
+  --text-light: #f8fafc; /* Texte blanc cassé */
+}
+
+/* --- Reset de base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- En-tête (Header) --- */
+header {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+#logo {
+  border-radius: 50%; /* Rend le logo rond, sympa si l'image s'y prête */
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4); /* Halo orange */
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+#logo:hover {
+  transform: scale(1.05); /* Petit effet de zoom au survol */
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #f97316;
+}
+
+/* --- Contenu Principal (Main) --- */
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* --- Style de la Carte du Joueur --- */
+.card {
+  background-color: var(--card-bg);
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-top: 4px solid var(--basketball-orange); /* Ligne orange en haut */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+#nomJoueur {
+  border-bottom: 2px dashed var(--primary-color);
+  padding-bottom: 5px;
+}
+
+/* --- Image du Joueur --- */
+#imageJoueur {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover; /* Assure que l'image ne se déforme pas */
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  background-color: #2a2a35; /* Couleur de fond si l'image est transparente */
+  border: 2px solid #333;
+}
+
+/* --- Question --- */
+#question {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #cbd5e1; /* Gris clair pour la lisibilité */
+  background-color: rgba(29, 66, 138, 0.1); /* Fond bleuté très léger */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+
+
+/* --- Bouton Valider --- */
+#btn-valider {
+  margin-top: 50px;
+  background-color: var(--basketball-orange);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+}
+
+/* Effets au survol et au clic du bouton de validation */
+#btn-valider:hover {
+  background-color: #e06812; /* Orange légèrement plus sombre */
+  transform: translateY(-2px);
+}
+
+#btn-valider:active {
+  transform: translateY(1px); /* Effet d'enfoncement quand on clique */
+}
+
+/* --- Animations --- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
