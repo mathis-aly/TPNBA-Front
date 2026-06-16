@@ -23,7 +23,18 @@
           <img id="imageJoueur" src="exemple.com" alt="Image du Joueur">
           <p id="question">La question apparaîtra ici...</p>
 
-          <button type="submit" id="btn-valider">Valider ma réponse</button>
+          <form id="reponse">
+      <div class="input">
+        <input 
+          type="text" 
+          id="reponse-utilisateur" 
+          placeholder="La réponse est..." 
+          autocomplete="off"
+          required
+        >
+        <button type="submit" id="btn-valider">Valider ma réponse</button>
+      </div>
+
       </section>
     </main>
     <script src="main.js"></script>
